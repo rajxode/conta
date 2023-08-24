@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+
+    <body>
+        <div id="container">
+
+            <h1>My Contact List</h1>
+
+            <ul id="list">
+                <% for (let i of contact_list) { %>
+                <li class="list_item">
+                    <div class="contact_detail">
+                        <span><%= i.name %></span>
+                        <span><%= i.number %></span>
+                    </div>
+                    
+
+
+                    <div class="delete_icon">
+                        <!-- query parem to return value of number  -->
+                        <a href="/delete-contact/?id=<%=i._id%>">  
+                            <i class="fa-regular fa-trash"></i>
+                        </a>
+                    </div>
+                </li>
+                
+                <% } %>
+            </ul>
+
+
+            <!-- to get user data  -->
+            <form action="/create" method="post">
+                <!-- for name and phone -->
+                <input type="text" name="name" placeholder="Enter your name">
+                <input type="number" name="number" placeholder="Enter your number">
+
+                <button type="submit">Add contact</button>
+            </form>
+
+        </div>
+
+        
+
+
+    </body>
+
+    <script type="text/javascript" src=""></script>
+</html>
