@@ -1,6 +1,5 @@
 
-// schema is like a blue print of 'collections'
-
+// import the mongoose
 const mongoose=require('mongoose');
 
 

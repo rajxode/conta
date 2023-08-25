@@ -38,6 +38,6 @@ app.listen(port,function(err){
         console.log('error',err);
         return;
     }
-    console.log('hello contact');
+    console.log(`server is running at port : ${port}`);
     return;
 })
