@@ -51,7 +51,7 @@ app.get('/',function(request, response){
         }
 
         return response.render('home',{
-            title:'My page',
+            title:'Contact List',
             contact_list:contacts
         });
         
